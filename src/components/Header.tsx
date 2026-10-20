@@ -1,44 +1,48 @@
+
 import Image from "next/image";
+import NavLinks from "./NavLinks";
 
 const Header = () => {
-    const date = new Date().toLocaleDateString("bn-BD", {
-        dateStyle: "full",
-    });
+  const date = new Date().toLocaleDateString("bn-BD", {
+    dateStyle: "full",
+  });
 
-    return (
-        <div className="navbar bg-base-100 shadow-md px-6">
+  return (
+    <header className="relative w-full py-4">
+      {/* Center: Logo, Website Name & Date */}
+      <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-1 px-4">
+        <Image
+          src="/logo.webp"
+          alt="Bangla News 24"
+          width={40}
+          height={40}
+          priority
+        />
 
-            {/* Left Side */}
-            <div className="navbar-start"></div>
+        <span className="text-2xl font-bold text-red-700">
+          Bangla News 24
+        </span>
 
-            {/* Center: Logo + Date */}
-            <div className="navbar-center flex items-center gap-4">
-                <Image
-                    src="/logo.webp"
-                    alt="Bangla News 24"
-                    width={180}
-                    height={60}
-                    className="w-auto h-14 object-contain"
-                />
+        <span className="text-xs text-neutral-500">
+          {date}
+        </span>
+      </div>
 
-                <p className="text-sm text-gray-500 whitespace-nowrap">
-                    {date}
-                </p>
-            </div>
+      {/* Right: Sign In & Sign Up */}
+      <div className="absolute right-6 top-4 z-10 flex items-center gap-2">
+  <button className="btn btn-outline btn-sm">
+    Sign In
+  </button>
 
-            {/* Right Side */}
-            <div className="navbar-end flex items-center gap-2">
-                <button className="btn btn-outline">
-                    Sign In
-                </button>
+  <button className="btn btn-sm border-red-700 bg-red-700 text-white hover:border-red-800 hover:bg-red-800">
+    Sign Up
+  </button>
+</div>
 
-                <button className="btn bg-red-700 text-white border-none">
-                    Sign Up
-                </button>
-            </div>
-
-        </div>
-    );
+      {/* Navigation */}
+      <NavLinks />
+    </header>
+  );
 };
 
 export default Header;
