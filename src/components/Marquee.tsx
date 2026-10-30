@@ -1,7 +1,7 @@
 import MarqueeText from "react-marquee-text"
 import "react-marquee-text/dist/styles.css"
 
-interface Headline {
+interface Headlines {
     id: string
     title: string
     url: string
@@ -10,7 +10,7 @@ interface Headline {
 const Marquee = async () => {
     const res = await fetch("https://news-api-v2.vercel.app/api/news?limit=10");
     const data = await res.json();
-    const headlines = data.data
+    const headlines: Headlines[] = data.data
     console.log(headlines)
     return (
         <div className="bg-red-600 text-white">
@@ -33,3 +33,4 @@ const Marquee = async () => {
 };
 
 export default Marquee;
+

@@ -40,6 +40,7 @@ const Header = () => {
 </div>
 
       {/* Navigation */}
+
       <NavLinks />
     </header>
   );
