@@ -1,6 +1,5 @@
-
 import MainNews from '@/components/MainNews';
-import Marquee from '@/components/Marquee';
+import MostRead from '@/components/MostRead';
 import NewsCard from '@/components/NewsCard';
 
 interface IOtherSection {
@@ -37,9 +36,7 @@ const page = async () => {
 
   return (
     <div>
-      <Marquee />
-
-      <div className="grid grid-cols-3 max-w-7xl mx-auto">
+      <div className="grid gap-5 grid-cols-3 max-w-7xl mx-auto mt-5">
 
         {/* news section */}
         <div className="col-span-2">
@@ -68,7 +65,8 @@ const page = async () => {
         </div>
 
         {/* most read section */}
-        <div className='bg-green-500 col-span-1'>
+        <div className='col-span-1'>
+          <MostRead/>
         </div>
 
       </div>

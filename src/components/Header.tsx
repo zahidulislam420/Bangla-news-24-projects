@@ -11,17 +11,19 @@ const Header = () => {
     <header className="relative w-full py-4">
       {/* Center: Logo, Website Name & Date */}
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-1 px-4">
-        <Image
-          src="/logo.webp"
-          alt="Bangla News 24"
-          width={40}
-          height={40}
-          priority
-        />
+        <div className="flex items-center gap-2">
+          <Image
+            src="/logo.webp"
+            alt="Bangla News 24"
+            width={40}
+            height={40}
+            priority
+          />
 
-        <span className="text-2xl font-bold text-red-700">
-          Bangla News 24
-        </span>
+          <span className="text-2xl font-bold text-red-700">
+            Bangla News 24
+          </span>
+        </div>
 
         <span className="text-xs text-neutral-500">
           {date}
