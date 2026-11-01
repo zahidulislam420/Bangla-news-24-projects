@@ -17,12 +17,13 @@ const Header = () => {
           <Image
             src="/logo.webp"
             alt="Bangla News 24"
+            className="h-9 w-9 sm:h-10 sm:w-10"
             width={40}
             height={40}
             priority
           />
 
-          <span className="text-2xl font-bold text-red-700">
+          <span className="text-xl font-bold text-red-700 sm:text-2xl">
             Bangla News 24
           </span>
         </div>

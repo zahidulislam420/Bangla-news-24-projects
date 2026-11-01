@@ -13,7 +13,7 @@ const UserInfo = () => {
   };
 
   return (
-    <div className="absolute right-4 top-4 flex items-center gap-3 text-sm">
+    <div className="mx-auto mt-3 flex w-fit items-center gap-3 text-sm sm:absolute sm:right-4 sm:top-4 sm:mx-0 sm:mt-0">
       {user ? (
         <div className="flex flex-col items-center gap-2">
           <Link href={"/profile"}>

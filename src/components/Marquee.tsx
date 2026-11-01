@@ -15,10 +15,10 @@ const Marquee = async () => {
     return (
         <div className="bg-red-600 text-white">
 
-        <div className="flex max-w-7xl mx-auto">
-             <div className="bg-red-700 py-1 px-5 font-bold">সর্বশেষ</div>
+        <div className="mx-auto flex w-full max-w-7xl">
+             <div className="shrink-0 bg-red-700 px-3 py-1 font-bold sm:px-5">সর্বশেষ</div>
 
-            <MarqueeText className="py-1" direction="right" duration={10}>
+            <MarqueeText className="min-w-0 flex-1 py-1" direction="right" duration={10}>
                         {
                 headlines.map(h => <span key={h.id}>
                     <span>{h.title}</span>
@@ -33,4 +33,3 @@ const Marquee = async () => {
 };
 
 export default Marquee;
-

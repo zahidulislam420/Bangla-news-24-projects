@@ -20,7 +20,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="flex min-h-full flex-col">
         <Header />
         <Marquee/>
-        <main className="max-w-7xl mx-auto"> {children} </main>
+        <main className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+          {children}
+        </main>
         <Toaster/>
       </body>
     </html>

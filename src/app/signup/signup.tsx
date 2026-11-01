@@ -42,10 +42,10 @@ const handleGithubSignIn = async () => {
 
 
     return (
-        <div className='flex flex-col items-center justify-center mt-5'>
+        <div className='mt-5 flex flex-col items-center justify-center px-4'>
             <h2 className='text-2xl font-bold text-red-700'>Sign Up</h2>
-        <form onSubmit={onSubmit}>
-              <fieldset className="fieldset rounded-box w-md">
+        <form onSubmit={onSubmit} className="w-full max-w-md">
+              <fieldset className="fieldset w-full rounded-box">
 
     <label className="label">Name</label>
     <input name='name' type="text" className="input" placeholder="name" />
@@ -65,8 +65,8 @@ const handleGithubSignIn = async () => {
             
         </form>
 
-        <button onClick={handleGoogleSignIn} className="btn">Sign In with Google</button>
-        <button onClick={handleGithubSignIn} className="btn">Sign in with GitHub</button>
+        <button onClick={handleGoogleSignIn} className="btn w-full max-w-md">Sign In with Google</button>
+        <button onClick={handleGithubSignIn} className="btn w-full max-w-md">Sign in with GitHub</button>
 
         </div>
     );

@@ -18,11 +18,12 @@ const MainNews = ({ news }: {news: News[]}) => {
     // console.log(otherNews)
 
   return (
-    <div className="flex gap-2">
+    <div className="grid min-w-0 grid-cols-1 gap-3 md:grid-cols-2">
    <Link href={`/news/${firstNews.id}`}>
-      <div className="card bg-base-100 w-96 shadow-sm">
+      <div className="card w-full min-w-0 bg-base-100 shadow-sm">
         <figure>
           <Image
+            className="h-auto w-full"
             height={600}
             width={600}
             src={firstNews.imageUrl}
@@ -37,10 +38,10 @@ const MainNews = ({ news }: {news: News[]}) => {
       </div>
    </Link>
 
-      <div className="grid gap-2">
+      <div className="grid min-w-0 gap-2">
         {otherNews.slice(0, 4).map((on) => (
           <div
-            className="card bg-base-100 border border-gray-300 p-5"
+            className="card min-w-0 bg-base-100 border border-gray-300 p-4 sm:p-5"
             key={on.id}
           >
             <p className="text-red-600 font-semibold">{firstNews.category}</p>

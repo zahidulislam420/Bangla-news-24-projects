@@ -17,6 +17,7 @@ const NewsCard = ({news} : {news:News}) => {
        <div className="card bg-base-100 shadow-sm">
            <figure>
              <Image
+               className="h-auto w-full"
                height={600}
                width={600}
                src={news.imageUrl}

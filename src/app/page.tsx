@@ -36,10 +36,10 @@ const page = async () => {
 
   return (
     <div>
-      <div className="grid gap-5 grid-cols-3 max-w-7xl mx-auto mt-5">
+      <div className="mx-auto mt-5 grid w-full max-w-7xl grid-cols-1 gap-5 lg:grid-cols-3">
 
         {/* news section */}
-        <div className="col-span-2">
+        <div className="min-w-0 lg:col-span-2">
           <MainNews news={mainNews} />
 
           <div className='grid gap-5 mt-5'>
@@ -51,7 +51,7 @@ const page = async () => {
                 <h1 className='font-bold border-b-2 pb-1'>{os.title}</h1>
 
                
-                <div className='grid mt-3 grid-cols-3 gap-2'>
+                <div className='mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3'>
                  {os.articles.map((news) => (
                   <NewsCard key={news.id} news={news} />
                 ))}
@@ -65,7 +65,7 @@ const page = async () => {
         </div>
 
         {/* most read section */}
-        <div className='col-span-1'>
+        <div className='min-w-0'>
           <MostRead/>
         </div>
 

@@ -49,13 +49,13 @@ const ProfilePage = () => {
 
         <button onClick={handleShowForm} className="btn">Edit Profile</button>
 
-      { show &&    <form onSubmit={handleUpdateProfile}>
-        <fieldset className="fieldset   rounded-box w-md">
+      { show &&          <form onSubmit={handleUpdateProfile} className="w-full max-w-md px-4">
+      <fieldset className="fieldset w-full rounded-box">
           <label className="label">নাম</label>
           <input
             name="name"
             type="text"
-            className="input w-md"
+            className="input w-full"
             placeholder="Name"
           />
 
@@ -63,7 +63,7 @@ const ProfilePage = () => {
           <input
             name="image"
             type="url"
-            className="input w-md"
+            className="input w-full"
             placeholder="Image"
           />
 

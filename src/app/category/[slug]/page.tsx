@@ -1,4 +1,5 @@
 import NewsCard from "@/components/NewsCard";
+import { notFound } from 'next/navigation';
 
 interface News {
     id: string;
@@ -35,7 +36,7 @@ const CategoryNews = async({params}: CategoryPageProps) => {
           <h1 className="text-2xl font-bold border-b-2 border-red-700 mb-5">
             {data.title} </h1>
 
-        <div className="grid grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
         {categoryNews.map(news => <NewsCard key={news.id}
          news={news}/> )}
         </div>
