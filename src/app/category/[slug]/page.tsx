@@ -25,8 +25,11 @@ const CategoryNews = async({params}: CategoryPageProps) => {
 
     const data: CategoryResponse = await res.json()
     const categoryNews = data.data
-    console.log(categoryNews)
-
+   
+    if(!categoryNews) {
+        notFound()
+    }
+    
     return (
         <div>
           <h1 className="text-2xl font-bold border-b-2 border-red-700 mb-5">
